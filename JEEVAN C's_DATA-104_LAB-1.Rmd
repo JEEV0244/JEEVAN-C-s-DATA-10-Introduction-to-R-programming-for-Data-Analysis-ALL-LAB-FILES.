@@ -1,0 +1,403 @@
+---
+LAB-1 
+JEEVAN C
+INTRODUCTION TO R PROGRAM
+---
+
+
+```{r}
+# R as Calculator
+log(10)
+```
+
+
+
+```{r}
+log10(10)
+```
+
+
+```{r}
+rm(list = ls())
+```
+
+
+```{r}
+sqrt(100)
+```
+
+
+```{r}
+abs(-13)
+```
+
+
+```{r}
+a = 10 
+```
+
+
+```{r}
+print(a)
+```
+
+
+```{r}
+cat("The value of a is = ", a)
+```
+
+
+```{r}
+result = TRUE
+```
+
+
+```{r}
+avg = 3.9
+```
+
+
+```{r}
+avg
+```
+
+
+```{r}
+Course = "Btech"
+```
+class() is a function which specifies the type of R objects
+
+```{r}
+class(result)
+```
+is,integer() is used to check whether a variable is of integer type or not
+
+```{r}
+is.integer(a)
+
+```
+
+
+```{r}
+a = as.integer(a)
+```
+
+
+```{r}
+a
+
+```
+
+
+```{r}
+class(a)
+```
+
+
+```{r}
+p = 5-3i
+```
+
+
+```{r}
+class(p)
+```
+
+
+```{r}
+sqrt(-4)
+```
+
+
+```{r}
+sqrt(as.complex(-4))
+```
+
+
+```{r}
+c = 20
+```
+
+
+```{r}
+c = c(1,2,3,4,5)
+```
+
+
+```{r}
+V1 = c("Durga ", "Sharma")
+```
+
+
+```{r}
+names(V1) = c("First name", "Last name")
+```
+
+
+```{r}
+x = V1["First name"]
+
+```
+
+Named Vector member
+```{r}
+V1["Last name"]
+```
+
+
+```{r}
+V1 = c("Barack", "Obama" )
+```
+
+
+```{r}
+V2 = c("First name", "Last name")
+```
+
+
+```{r}
+names(V1) = V2
+```
+
+
+```{r}
+V1
+```
+
+
+```{r }
+V1 
+```
+
+
+```{r}
+message = c("Hello", "World", "I", "am", "good")
+```
+
+
+```{r}
+print(message)
+```
+
+
+```{r}
+paste(message, collapse = "@@@@")
+
+```
+
+
+```{r}
+paste(letters[1:3], 1:3, sep ="#", collapse= "$$$")
+```
+
+
+```{r}
+paste("student",1:10, sep = "_")
+```
+
+
+```{r}
+V1 = c(10,20,30,40,23)
+```
+
+
+```{r}
+V1<25
+```
+
+
+```{r}
+V1<45 & V1>25
+```
+
+
+```{r}
+v1 = c(1,3,5,7,9)
+```
+
+
+```{r}
+v2 = c(16,7,8,9,10)
+```
+
+
+```{r}
+v1[1]<10 && v2[1]<10
+```
+
+
+```{r}
+q1 = (1:10)
+```
+
+
+```{r}
+15 %in% q1
+```
+
+
+```{r}
+q2 = q1 %*% t(q1)
+```
+
+
+```{r}
+print(q2)
+```
+
+
+```{r}
+v1 = vector("character", length = 4)
+```
+
+
+```{r}
+print(v1)
+```
+
+
+```{r}
+unique(q1)
+```
+
+
+```{r}
+round(1.2343234, 2)
+```
+
+
+```{r}
+v = c(1,2,3,1,1)
+```
+
+
+```{r}
+which(v==1)
+```
+
+
+```{r}
+which.max(v)
+```
+
+
+```{r}
+which.min(v)
+```
+
+
+```{r}
+BOD
+```
+
+
+```{r}
+which( BOD$demand>15)
+```
+
+
+```{r}
+data()
+```
+
+
+```{r}
+data(package = .packages(all.available = TRUE))
+```
+
+Create a list
+```{r}
+L = list(1,2,3, "Aaa", "Hello", c(1,2,3,4,5,6))
+```
+
+
+```{r}
+print(L)
+```
+
+
+```{r}
+L = list(1,20,T)
+```
+
+
+```{r}
+print(L)
+```
+
+
+```{r}
+names(L) = c("ID","Age", "Can Vote")
+```
+
+
+```{r}
+L
+```
+
+
+```{r}
+L$Age
+```
+
+
+```{r}
+h_B = list("Bhavna", 95)
+```
+
+
+```{r}
+h_S = list("Sonakshi", 90)
+```
+
+
+```{r}
+h_A = list("Aron", 91)
+```
+
+
+
+
+
+```{r} 
+L = list(rno = 1, name = "Riya", marks = 89.5, course = "Btech")
+```
+
+
+
+```{r}
+L
+```
+
+
+```{r}
+L$rno = NULL
+```
+
+
+```{r}
+L
+```
+
+
+```{r}
+L["rno"] = NULL
+```
+
+
+```{r}
+L
+```
+
+
+
+```{r}
+highest.score = list(h_B,h_S,h_A)
+```
+
+
+```{r}
+paste("Hello", "World")
+
+```
+

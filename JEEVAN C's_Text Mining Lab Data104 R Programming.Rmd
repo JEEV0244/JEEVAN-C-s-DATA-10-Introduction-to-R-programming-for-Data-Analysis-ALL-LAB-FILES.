@@ -1,0 +1,43 @@
+### LAB 
+### text mining
+### JEEVAN C
+### DATA_104_INTRODUCTION TO R PROGRAM
+
+library(dplyr) 
+library(ggplot2) 
+library(stringr) 
+library(tm) 
+
+#### Read the data 
+
+mydata <- text.txt(file.choose(), header = TRUE,
+                   na.strings = "", stringsAsFactors = FALSE)
+
+# Printing the content 
+print(positive_words) 
+
+rm(list = ls())
+sessionInfo() 
+sample(positive_words, 30) 
+head(positive_words,10) 
+cleaned_text = gsub(pattern = "\\W", replace = " ", positive_words) 
+print(cleaned_text) 
+cleaned_text = gsub(pattern = "\\d", replace = " ",cleaned_text) 
+cleaned_text = gsub(pattern = "\\d", replace = " ",cleaned_text) 
+cleaned_text = removeWords(cleaned_text, stopwords("english")) 
+cleaned_text = tolower(cleaned_text) 
+
+## to remove lenth of 1  
+cleaned_text = gsub(pattern = "\\b[A-z]\\b{1}", replace = " ", cleaned_text) 
+
+#to strip white spaces 
+cleaned_text = stripWhitespace(cleaned_text) 
+text_bag = str_split(cleaned_text, pattern = "\\s") 
+text_bag = unlist(text_bag) 
+print(text_bag) 
+wordcloud(text_bag, min.freq = 2, max.words=Inf,col = rainbow(10), random.order = FALSE) 
+
+#  Frequency Analysis 
+word_freq <- table(text_bag) 
+word_freq_df <- as.data.frame(word_freq) 
+word_freq_df <- word_freq_df %>% arrange(desc(Freq)) 
